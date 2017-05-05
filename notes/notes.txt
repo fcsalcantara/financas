@@ -1,0 +1,8 @@
+Annotations JPA -Hibernate:
+
+@Entity -> Marca o JavaBean como tabela do banco de dados.
+@Table( ... ) -> Modifica propriedades da tabela associada à classe JavaBean.
+@Table(name="table_name") -> Modifica o nome da tabela associada à classe JavaBean.
+@Id -> Marca um atributo da classe como chave primária.
+@GeneratedValue -> Marca o atributo da chave primária para geração automática pelo BD.
+	@GeneratedValue(strategy = GenerationType.<TYPE>)
