@@ -41,4 +41,7 @@ public class Conta {
 //	
 //	public void setNumero(String numero) { this.numero = numero; }
 	
+	@Override
+	public String toString() { return "Conta do " + titular + " no " + banco; }
+	
 }
