@@ -23,7 +23,9 @@ public class Conta {
 		this.numero = numero;
 	}
 	
-//	public Conta() { }
+	public Conta() { }
+	
+	public Integer getId() { return id; }
 	
 	public String getTitular() { return titular; }
 	
@@ -33,7 +35,9 @@ public class Conta {
 	
 	public String getNumero() { return numero; }
 	
-//	public void setTitular(String titular) { this.titular = titular; }
+//	public void setId(Integer id) { this.id = id; }
+//	
+	public void setTitular(String titular) { this.titular = titular; }
 //	
 //	public void setBanco(String banco) { this.banco = banco; }
 //	
@@ -42,6 +46,6 @@ public class Conta {
 //	public void setNumero(String numero) { this.numero = numero; }
 	
 	@Override
-	public String toString() { return "Conta do " + titular + " no " + banco; }
+	public String toString() { return "Conta do " + titular + " no " + banco + '.'; }
 	
 }
