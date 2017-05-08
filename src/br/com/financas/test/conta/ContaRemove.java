@@ -14,7 +14,8 @@ public class ContaRemove {
 
 		manager.getTransaction().begin();
 		
-		cDAO.remove(cDAO.busca(2));
+		cDAO.remove(cDAO.busca(1));
+		cDAO.remove(cDAO.busca(3));
 		
 		manager.getTransaction().commit();
 		manager.close();

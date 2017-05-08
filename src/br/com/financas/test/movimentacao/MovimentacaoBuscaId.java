@@ -6,7 +6,7 @@ import br.com.financas.dao.MovimentacaoDAO;
 import br.com.financas.model.Movimentacao;
 import br.com.financas.util.JPAUtil;
 
-public class MovimentacaoBusca {
+public class MovimentacaoBuscaId {
 
 	public static void main(String[] args) {
 

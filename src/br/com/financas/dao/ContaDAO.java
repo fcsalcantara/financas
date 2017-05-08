@@ -10,8 +10,9 @@ public class ContaDAO {
 	
 	private EntityManager manager;
 	
-	// A ContaDAO precisa receber uma EntityManager para que o mesmo seja
-	// aberto e fechado em um método externo.
+	// A ContaDAO precisa receber uma EntityManager para que a transação com o BD seja
+	// aberta e fechada em um método externo, evitando erros que causam o não encerramento das transações.
+	// Obs.: È importante abrir e fechar uma transação com o EntityManager em um mesmo método.
 	public ContaDAO(EntityManager manager) { this.manager = manager; }
 	
 	public void adiciona(Conta conta) { manager.persist(conta); }

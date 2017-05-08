@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -13,7 +14,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import br.com.financas.model.listeners.MovimentacaoListener;
+
 @Entity
+@EntityListeners(MovimentacaoListener.class)
 public class Movimentacao {
 	
 	@Id
@@ -24,6 +28,15 @@ public class Movimentacao {
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	private Calendar data;
+	
+	// Uma forma de executar CallBack...
+	// Método executado sempre antes de uma persistência ou atualização do objeto "Movimentacao" no banco:
+//	@PrePersist
+//	@PreUpdate
+//	public void preAtualiza() {
+//		this.setData(Calendar.getInstance());
+//		System.out.println("A data e horário foram atualizados antes da persistência no banco de dados.");
+//	}
 	
 	@ManyToOne
 	private Conta conta;
