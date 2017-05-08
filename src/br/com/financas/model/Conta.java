@@ -23,7 +23,7 @@ public class Conta {
 		this.numero = numero;
 	}
 	
-	public Conta() { }
+	public Conta() { } // Inserido somente para o Hibernate.
 	
 	public Integer getId() { return id; }
 	

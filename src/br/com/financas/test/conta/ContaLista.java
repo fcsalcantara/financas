@@ -1,4 +1,4 @@
-package br.com.financas.test;
+package br.com.financas.test.conta;
 
 import java.util.List;
 

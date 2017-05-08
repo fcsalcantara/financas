@@ -10,6 +10,8 @@ public class ContaDAO {
 	
 	private EntityManager manager;
 	
+	// A ContaDAO precisa receber uma EntityManager para que o mesmo seja
+	// aberto e fechado em um método externo.
 	public ContaDAO(EntityManager manager) { this.manager = manager; }
 	
 	public void adiciona(Conta conta) { manager.persist(conta); }
