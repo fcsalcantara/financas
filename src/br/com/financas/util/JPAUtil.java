@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 public class JPAUtil {
 	
 	// Mantém um "EntityManagerFactory" aberto desde a primeira chamada:
-	private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("financas");
+	private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("financas_old");
 	
 	public EntityManager getEntityManager() { return factory.createEntityManager(); } 
 

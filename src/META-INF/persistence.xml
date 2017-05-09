@@ -3,10 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
 	http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
-	version="2.0">
+	version="2.0">	
 	
 	<!-- Define o nome da unidade de persistência:  -->
-	<persistence-unit name="financas">
+	<persistence-unit name="financas_old">
 		
 		<!-- Define o framework ORM usado: -->
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
@@ -30,4 +30,9 @@
 			<property name="hibernate.format_sql"   value="true" />
 		</properties>
 	</persistence-unit>
+	
+	<persistence-unit name="financas" transaction-type="JTA">
+		<jta-data-source>java:jboss/financas</jta-data-source>
+	</persistence-unit>
+	
 </persistence>
